@@ -13,6 +13,7 @@ const result = ingredients.map((ingredient) => {
   const item = document.createElement("li");
   item.textContent = ingredient;
   item.classList.add("item");
-  list.append(item);
+  return item;
 });
-console.log(list);
+
+list.append(...result);
